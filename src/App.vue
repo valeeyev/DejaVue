@@ -1,28 +1,19 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <h1>{{ title }}</h1>
-  <input type="text" ref="name" />
-  <button @click="mouseClick">bos uni</button>
-  <!-- <HelloWorld msg="Welcome to fight club" /> -->
+  <modal></modal>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
-
+import modal from "./components/Modal.vue";
 export default {
   name: "App",
+  components: { modal },
   data() {
     return {
-      title: "Welcome to Fight club",
+      title: "Welcome to CSedu",
     };
   },
-  methods: {
-    mouseClick() {
-      console.log(this.$refs.name);
-      this.$refs.name.classList.add("active");
-      this.$refs.name.focus();
-    },
-  },
+  methods: {},
 };
 </script>
 
